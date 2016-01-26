@@ -1,0 +1,71 @@
+$grey : #e3e3e3;
+$lawnGreen : #93FF33;
+$orange    : #F15B42;
+$blue      : #3032AF;
+$lightBlue : #61b6d9;
+$black     : #333;
+
+  #mainContent {
+    width: 70%;
+    height: 60px;
+    float: left;
+    margin: 1em 0.1em 0em 2em;
+  }
+  .appTitle {
+    margin-left: 0px;
+    text-align : center;
+    background-color: $grey;
+  }
+
+  #levels select{
+    font-size: 1.2em;
+    height : 42px;
+    text-transform : uppercase;
+  }
+
+  #levels {
+    left: 2em;
+    font-size:1.2em;
+  }
+  .progress-main {
+    position:relative;
+    margin: 0em 0em 0.5em 0em;
+    border-radius : 0.3em;
+    border: {
+    width:0.2em;
+    style:solid; 
+    color:$grey;
+    }
+  }
+  .progress-bars {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    border-radius : 0.2em;
+  }
+  .dataLabel {
+    position: relative;
+    color: #000;
+    font-size: 1.5em;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin: 1em 0.1px 0em 0.8em;
+    font-weight: bold;
+    color: $black;
+  }
+
+
+.positive {
+  height: inherit;
+  background-color: $lightBlue;
+}
+.negative {
+  height: inherit;
+  background-color: $orange;
+}
+
+.buttons {
+  border-right: 1px solid #fff;
+}

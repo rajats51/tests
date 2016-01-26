@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+	<title>Progress Bars - Reactive</title>
+	<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+	<link rel="stylesheet" type="text/css" href="css/app.min.css">
+</head>
+<body>
+	<div class="wrapper row">
+		<header class="appTitle large-12 medium-12 small-12 columns">
+			<h1>Progress Bars Demo Using Ractive gulp & Sass</h1>
+		</header>
+		<div id="mainContent" class="content large-12 medium-12 small-12 columns">
+		</div>
+	</div>
+	<!-- Progress Bars Module Template Script -->
+	<script type="text/html" id="bars-tpl">
+	  {{#each progressData}}
+		<div class="progress-main ">
+			<div id="progress-bars" class="progress-bars {{level > 100 ? 'negative' : 'positive'}} " style="width:{{level > 100 ? 100 : level}}%;">
+				<span class="dataLabel">{{level > 100 ? 100 : level}}%</span>
+			</div>
+		</div>
+	  {{/each}}
+
+	  <div id="levels">
+		<select value='{{value}}'>
+			{{#each progressData :index}}
+				<option value='{{index}}'>
+					{{name}}
+				</option>
+			{{/each}}
+		</select>
+		{{#each levels}}
+			<button class="buttons" on-click='getNextLevel(nextlevel)'>
+			  {{nextlevel > 0 ? '+' : ''}}{{nextlevel}}
+			</button>
+		{{/each}}
+	  </div>
+	</script>
+	<script src='js/jquery-1.11.3.min.js'></script>
+	<script src='js/ractive.min.js'></script>
+	<script src='js/app.min.js'></script>
+</body>
+</html>
